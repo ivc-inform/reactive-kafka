@@ -26,8 +26,8 @@ object Publish extends AutoPlugin {
         organizationName := "Typesafe Inc.",
         organizationHomepage := Some(url("http://www.lightbend.com")),
         homepage := Some(url("https://github.com/akka/reactive-kafka")),
-        publishMavenStyle := false,
-        pomIncludeRepository := { x => false },
+//        publishMavenStyle := false,
+//        pomIncludeRepository := { x => false },
 //        defaultPublishTo := crossTarget.value / "repository",
 //        releasePublishArtifactsAction := PgpKeys.publishSigned.value
     )

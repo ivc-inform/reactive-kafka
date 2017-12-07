@@ -26,7 +26,7 @@ val coreDependencies = Seq(
 )
 
 val commonSettings = Seq(
-  organization := "com.typesafe.akka",
+  organization := "ru.mfms.mfmd",
   organizationName := "Lightbend",
   startYear := Some(2014),
   test in assembly := {},
