@@ -62,7 +62,8 @@ lazy val root =
     .settings(commonSettings)
     .settings(Seq(
     publishArtifact := false,
-    publishTo := Some(Resolver.file("Unused transient repository", file("target/unusedrepo")))))
+    //publishTo := Some(Resolver.file("Unused transient repository", file("target/unusedrepo")))
+    ))
     .aggregate(core, benchmarks, docs)
 
 lazy val core = project
