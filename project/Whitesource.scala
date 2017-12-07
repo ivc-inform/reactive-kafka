@@ -4,7 +4,7 @@ import sbtwhitesource.WhiteSourcePlugin.autoImport._
 import sbtwhitesource._
 import com.typesafe.sbt.SbtGit.GitKeys._
 
-object Whitesource extends AutoPlugin {
+object sbtWhitesource extends AutoPlugin {
   override def requires = WhiteSourcePlugin
 
   override def trigger = allRequirements
