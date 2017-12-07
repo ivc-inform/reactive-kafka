@@ -1,10 +1,9 @@
 package akka
 
-import sbt._
-import sbt.Keys._
 import java.io.File
-import sbtrelease.ReleasePlugin.autoImport.releasePublishArtifactsAction
-import com.typesafe.sbt.pgp.PgpKeys
+
+import sbt.Keys._
+import sbt._
 
 object Publish extends AutoPlugin {
 
@@ -27,7 +26,7 @@ object Publish extends AutoPlugin {
         organizationName := "Typesafe Inc.",
         organizationHomepage := Some(url("http://www.lightbend.com")),
         homepage := Some(url("https://github.com/akka/reactive-kafka")),
-        publishMavenStyle := true,
+        publishMavenStyle := false,
         pomIncludeRepository := { x => false },
 //        defaultPublishTo := crossTarget.value / "repository",
 //        releasePublishArtifactsAction := PgpKeys.publishSigned.value
