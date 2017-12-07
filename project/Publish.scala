@@ -13,7 +13,7 @@ object Publish extends AutoPlugin {
     override def requires = sbtrelease.ReleasePlugin
 
     override lazy val projectSettings = Seq(
-        crossPaths := false,
+        //crossPaths := false,
         pomExtra := akkaPomExtra,
         publishTo := {
             val corporateRepo = "http://toucan.simplesys.lan/"
