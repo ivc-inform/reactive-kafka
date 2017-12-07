@@ -1,6 +1,6 @@
 resolvers += Classpaths.sbtPluginReleases
 
-addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.6") ///
+addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.6")
 
 addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.1.0")
 
@@ -14,4 +14,3 @@ addSbtPlugin("com.lightbend.paradox" % "sbt-paradox" % "0.3.1")
 
 addSbtPlugin("com.lightbend" % "sbt-whitesource"  % "0.1.6")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "0.9.3")
