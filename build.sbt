@@ -4,7 +4,7 @@ import de.heikoseeberger.sbtheader.HeaderPattern
 name := "akka-stream-kafka"
 
 val akkaVersion = "2.5.7"
-val kafkaVersion = "0.11.0.1"
+val kafkaVersion = "1.0.0"
 
 val kafkaClients = "org.apache.kafka" % "kafka-clients" % kafkaVersion
 
@@ -34,7 +34,7 @@ val commonSettings = Seq(
   startYear := Some(2014),
   test in assembly := {},
   licenses := Seq("Apache License 2.0" -> url("http://opensource.org/licenses/Apache-2.0")),
-  scalaVersion := "2.11.12",
+  scalaVersion := "2.12.4",
   crossScalaVersions := Seq(scalaVersion.value, "2.12.4"),
   crossVersion := CrossVersion.binary,
   scalariformAutoformat := true,
