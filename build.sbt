@@ -32,8 +32,8 @@ val commonSettings = Seq(
   test in assembly := {},
   licenses := Seq("Apache License 2.0" -> url("http://opensource.org/licenses/Apache-2.0")),
   scalaVersion := "2.12.4",
-  crossScalaVersions := Seq(scalaVersion.value, "2.12.4"),
-  crossVersion := CrossVersion.binary,
+  //crossScalaVersions := Seq(scalaVersion.value, "2.12.4"),
+  //crossVersion := CrossVersion.binary,
   scalariformAutoformat := true,
   scalacOptions ++= Seq(
   "-deprecation",
