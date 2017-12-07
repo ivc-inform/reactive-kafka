@@ -1,12 +1,9 @@
 import scalariform.formatter.preferences._
-import de.heikoseeberger.sbtheader.HeaderPattern
 
 name := "akka-stream-kafka"
 
 val akkaVersion = "2.5.7"
 val kafkaVersion = "1.0.0"
-
-val kafkaClients = "org.apache.kafka" % "kafka-clients" % kafkaVersion
 
 val commonDependencies = Seq(
   "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test
@@ -14,7 +11,7 @@ val commonDependencies = Seq(
 
 val coreDependencies = Seq(
   "com.typesafe.akka" %% "akka-stream" % akkaVersion,
-  kafkaClients,
+  "org.apache.kafka" % "kafka-clients" % kafkaVersion,
   "org.scalatest" %% "scalatest" % "3.0.4" % Test,
   "org.reactivestreams" % "reactive-streams-tck" % "1.0.1" % Test,
   "com.novocode" % "junit-interface" % "0.11" % Test,
@@ -57,16 +54,13 @@ testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v"),
   .setPreference(DanglingCloseParenthesis, Preserve)
   .setPreference(NewlineAtEndOfFile, true)
   .setPreference(SpacesAroundMultiImports, false),
-headers := headers.value ++ Map(
-  "scala" -> (
-    HeaderPattern.cStyleBlockComment,
-    """|/*
-       | * Copyright (C) 2014 - 2016 Softwaremill <http://softwaremill.com>
-       | * Copyright (C) 2016 Lightbend Inc. <http://www.lightbend.com>
-       | */
-       |""".stripMargin
-  )
-))
+  headerLicense := Some(HeaderLicense.Custom(
+      """/*
+        | * Copyright (C) 2014 - 2016 Softwaremill <http://softwaremill.com>
+        | * Copyright (C) 2016 Lightbend Inc. <http://www.lightbend.com>
+        | */
+        |""".stripMargin
+  )))
 
 resolvers in ThisBuild ++= Seq(Resolver.bintrayRepo("manub", "maven"))
 
