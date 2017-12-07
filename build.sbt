@@ -53,14 +53,7 @@ testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v"),
   .setPreference(CompactControlReadability, true)
   .setPreference(DanglingCloseParenthesis, Preserve)
   .setPreference(NewlineAtEndOfFile, true)
-  .setPreference(SpacesAroundMultiImports, false),
-  headerLicense := Some(HeaderLicense.Custom(
-      """/*
-        | * Copyright (C) 2014 - 2016 Softwaremill <http://softwaremill.com>
-        | * Copyright (C) 2016 Lightbend Inc. <http://www.lightbend.com>
-        | */
-        |""".stripMargin
-  )))
+  .setPreference(SpacesAroundMultiImports, false))
 
 resolvers in ThisBuild ++= Seq(Resolver.bintrayRepo("manub", "maven"))
 
@@ -73,7 +66,6 @@ lazy val root =
     .aggregate(core, benchmarks, docs)
 
 lazy val core = project
-  .enablePlugins(AutomateHeaderPlugin)
   .settings(commonSettings)
   .settings(Seq(
     name := "akka-stream-kafka",
@@ -104,7 +96,6 @@ lazy val docs = project.in(file("docs"))
 lazy val Benchmark = config("bench") extend Test
 
 lazy val benchmarks = project
-  .enablePlugins(AutomateHeaderPlugin)
   .enablePlugins(DockerPlugin)
   .settings(commonSettings)
   .settings(Seq(
