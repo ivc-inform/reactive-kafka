@@ -9,7 +9,7 @@ Created and maintained by
 ## Old API: 0.10.0
 
 Supports Kafka 0.9.0.x
-**For Kafka 0.8** see [this branch](https://github.com/softwaremill/reactive-kafka/tree/0.8).
+**For Kafka 1.0.0** see [this branch](https://github.com/softwaremill/reactive-kafka/tree/0.8).
 
 Available at Maven Central for Scala 2.11:
 
