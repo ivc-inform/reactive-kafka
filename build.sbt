@@ -2,7 +2,7 @@ import scalariform.formatter.preferences._
 
 name := "akka-stream-kafka"
 
-val akkaVersion = "2.5.7"
+val akkaVersion = "2.5.9"
 val kafkaVersion = "1.0.0"
 
 val commonDependencies = Seq(
